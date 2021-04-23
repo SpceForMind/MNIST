@@ -62,8 +62,10 @@ optional arguments:
   --nn_model_path NN_MODEL_PATH (you need run it after learning and saving NN-model)
   --img_path IMG_PATH
 ```
-![](https://raw.githubusercontent.com/SpceForMind/MNIST/main/img/3.png)
+
 *Example:*
+
+![](https://raw.githubusercontent.com/SpceForMind/MNIST/main/img/3.png)
 
 ```bash
 python -m run recognize --nn_model_path train_results/train_2021_4_22_19_3_59 --img_path img/3.jpg
