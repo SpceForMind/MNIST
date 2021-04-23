@@ -52,8 +52,17 @@ optional arguments:
 python -m run tester --path_to_model train_results/train_2021_4_22_19_3_59
 ```
 
+### Recognize single-image with num
+*Example:*
+
+```bash
+python -m run recognize --nn_model_path train_results/train_2021_4_22_19_3_59 --img_path img/3.jpg
+```
+
 ### Summary
 Mnist NN has accuary ~ 98% if you run train loop with defaults train-settings
 
 
 Defaults settings defined in the `run/__main__.py`
+
+
