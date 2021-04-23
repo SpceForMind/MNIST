@@ -30,5 +30,6 @@ class MnistNN(nn.Module):
         '''
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = self.fc3(x) # shape - [200, 10]
+
         return F.log_softmax(x)

@@ -2,11 +2,25 @@ from argparse import ArgumentParser
 
 from run.trainer import main as trainer_main
 from run.tester import main as tester_main
+from run.num_by_photo_recognizer import main as num_by_photo_recognizer_main
 
 
 def parse_args():
     parser = ArgumentParser(description='MNIST Trainer/Tester')
     subparsers = parser.add_subparsers()
+
+    num_py_photo_recognizer_parser = subparsers.add_parser('recognize', help='Num on Image recognizer')
+    num_py_photo_recognizer_parser.add_argument('--nn_model_path',
+                                                action='store',
+                                                dest='nn_model_path',
+                                                required=False,
+                                                type=str)
+    num_py_photo_recognizer_parser.add_argument('--img_path',
+                                                action='store',
+                                                dest='img_path',
+                                                required=False,
+                                                type=str)
+    num_py_photo_recognizer_parser.set_defaults(func=num_by_photo_recognizer_main)
 
     train_parser = subparsers.add_parser('trainer', help='MNIST Trainer')
     train_parser.add_argument('--batch_size',
